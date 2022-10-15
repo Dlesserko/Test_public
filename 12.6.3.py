@@ -1,11 +1,11 @@
 #Дратути)
 
 money = int(input('Введите сумму вклада '))
-
-TKB = int(money * 5.6 / 100)
-SKB = int(money * 5.9 / 100)
-VTB = int(money * 4.28 / 100)
-SBER = int(money * 4.0 / 100)
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+TKB = int(money * per_cent.get('ТКБ') / 100)
+SKB = int(money * per_cent.get('СКБ') / 100)
+VTB = int(money * per_cent.get('ВТБ') / 100)
+SBER = int(money * per_cent.get('СБЕР') / 100)
 print ('Депозит ТКБ =',TKB, '\nДепозит СКБ =', SKB, '\nДепозит ВТБ =', VTB, '\nДепозит СБЕР =', SBER)
 
 deposit = [TKB, SKB, VTB, SBER]
